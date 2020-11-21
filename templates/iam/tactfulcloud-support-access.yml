@@ -1,0 +1,130 @@
+## Tactful Cloud Resource Template (http://tactful.cloud)
+## Developer: @rosswickman (ross@tactful.cloud)
+## Resource Provisioned: IAM Role(s)
+## Description: This template deploys 1, 2, or 3 IAM Roles
+## These role provide different levels of access into the account which it is deployed from the Tactful Cloud Support Account: 209355795568
+## These roles use the default AWS Managed IAM Policy for the following access:
+## - ViewOnly access role - allows limited view/read access without the ability to do things like look at S3 Objects
+## - ReadOnly access role - allows read access to all resources in the account
+## - Administrator access role - allows Full administration access to all resources in the account
+## This stack can be updated at anytime to add/remove roles.
+## NOTE: The most permissive role is deploy with all lower level permissions.
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'Tactful Cloud - IAM Role(s) for Account Access'
+
+Metadata:
+
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+    - Label:
+        default: Select Allowed Permissions
+      Parameters:
+      - Permissions
+
+    ParameterLabels:
+      Permissions:
+        default: Permissions
+
+Parameters:
+
+  Permissions:
+    Type: String
+    Description: Which role to deploy (ReadOnly will deploy with Administrator for safe reviewing of resources)
+    AllowedValues:
+      - "NoAccess"
+      - "ViewOnly"
+      - "ReadOnly"
+      - "Administrator"
+
+Conditions:
+
+  deployViewOnly: !Or [ !Equals [!Ref Permissions, "ViewOnly"], !Equals [!Ref Permissions, "ReadOnly"], !Equals [!Ref Permissions, "Administrator"] ]
+  deployReadOnly: !Or [ !Equals [!Ref Permissions, "ReadOnly"], !Equals [!Ref Permissions, "Administrator"] ]
+  deployAdmin:    !Equals [!Ref Permissions, "Administrator"]
+
+Resources:
+
+  ## Always deployed
+  roleViewOnlyAccess:
+    Condition: deployViewOnly
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: TactfulCloud-ViewOnlyAccess
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+              - arn:aws:iam::209355795568:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_SupportUser_1277496576f3d7ba
+              - arn:aws:iam::209355795568:role/SupportRole
+            Action:
+              - sts:AssumeRole
+      ManagedPolicyArns:
+      - !Sub arn:${AWS::Partition}:iam::aws:policy/job-function/ViewOnlyAccess
+      Tags:
+        - Key: Name
+          Value: Tactful.Cloud Support Resource
+        - Key: Web
+          Value: https://tactful.cloud
+        - Key: Contact
+          Value: support@tactful.cloud
+        - Key: Support
+          Value: http://support.tactful.cloud
+
+  ## Also deployed when Admin role is deployed
+  roleReadOnlyAccess:
+    Condition: deployReadOnly
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: TactfulCloud-ReadOnlyAccess
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+              - arn:aws:iam::209355795568:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_SupportUser_1277496576f3d7ba
+              - arn:aws:iam::209355795568:role/SupportRole
+            Action:
+              - sts:AssumeRole
+      ManagedPolicyArns:
+      - !Sub arn:${AWS::Partition}:iam::aws:policy/ReadOnlyAccess
+      Tags:
+        - Key: Name
+          Value: Tactful.Cloud Support Resource
+        - Key: Web
+          Value: https://tactful.cloud
+        - Key: Contact
+          Value: support@tactful.cloud
+        - Key: Support
+          Value: http://support.tactful.cloud
+
+  ## Deployment of admin role will include ReadOnly and ViewOnly Roles
+  roleAdministratorAccess:
+    Condition: deployAdmin
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: TactfulCloud-AdministratorAccess
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+              - arn:aws:iam::209355795568:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_SupportUser_1277496576f3d7ba
+              - arn:aws:iam::209355795568:role/SupportRole
+            Action:
+              - sts:AssumeRole
+      ManagedPolicyArns:
+      - !Sub arn:${AWS::Partition}:iam::aws:policy/AdministratorAccess
+      Tags:
+        - Key: Name
+          Value: Tactful.Cloud Support Resource
+        - Key: Web
+          Value: https://tactful.cloud
+        - Key: Contact
+          Value: support@tactful.cloud
+        - Key: Support
+          Value: http://support.tactful.cloud

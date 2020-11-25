@@ -1,5 +1,5 @@
 ---
-name: Master
+name: Development Workflow
 
 on:
   push:

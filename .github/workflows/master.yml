@@ -1,5 +1,5 @@
 ---
-name: Master
+name: Production Workflow
 
 on:
   push:

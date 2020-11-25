@@ -47,12 +47,12 @@ To deploy these resources into your AWS account\(s\) you must follow these steps
 
 | Permissions | Launch Button |
 | :--- | :--- |
-| No Access | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-solutions.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=NoAccess) |
-| View Only | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-solutions.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=ViewOnly) |
-| Read Only | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-solutions.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=ReadOnly) |
-| Administrator | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-solutions.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=Administrator) |
+| No Access | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=NoAccess) |
+| View Only | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=ViewOnly) |
+| Read Only | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=ReadOnly) |
+| Administrator | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=tactfulcloud-support-access&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml&param_Permissions=Administrator) |
 
-Or you can download the template from [http://aws-solutions.tactfulcloud.com/iam/tactfulcloud-support-access.yml](http://aws-solutions.tactfulcloud.com/iam/tactfulcloud-support-access.yml) to deploy manually.
+Or you can download the template from [http://aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml](http://aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml) to deploy manually.
 
 ![launch-support-stack](../.gitbook/assets/launch-support-stack.gif)
 

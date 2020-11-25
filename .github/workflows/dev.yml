@@ -10,6 +10,8 @@ on:
 jobs:
   superlinter:
     runs-on: ubuntu-latest
+    env:
+      RUN_LOCAL: true
     name: Super-Linter
     steps:
       - name: Checkout repo
@@ -27,7 +29,7 @@ jobs:
       - name: Run Checkov action
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: templates
+          directory: solutions
           quiet: true
 
   cfn-nag:
@@ -40,4 +42,4 @@ jobs:
       - name: CFN-NAG
         uses: stelligent/cfn_nag@master
         with:
-          input_path: templates
+          input_path: solutions

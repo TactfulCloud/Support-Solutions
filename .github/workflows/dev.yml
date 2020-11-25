@@ -29,7 +29,7 @@ jobs:
       - name: Run Checkov action
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: solutions
+          directory: templates
           quiet: true
 
   cfn-nag:
@@ -42,4 +42,4 @@ jobs:
       - name: CFN-NAG
         uses: stelligent/cfn_nag@master
         with:
-          input_path: solutions
+          input_path: templates

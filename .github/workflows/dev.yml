@@ -7,6 +7,9 @@ on:
       - '*'
       - '!master'
 
+env:
+  CHECK_DIR: '.'
+
 jobs:
   superlinter:
     runs-on: ubuntu-latest
@@ -29,7 +32,7 @@ jobs:
       - name: Run Checkov action
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: solutions
+          directory: ${{ env.CHECK_DIR }}
           quiet: true
 
   cfn-nag:
@@ -42,4 +45,4 @@ jobs:
       - name: CFN-NAG
         uses: stelligent/cfn_nag@master
         with:
-          input_path: solutions
+          input_path: ${{ env.CHECK_DIR }}

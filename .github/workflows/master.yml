@@ -7,7 +7,13 @@ on:
       - master
 
 env:
-  bucket-name: aws-solutions
+  REGION: 'us-east-1'
+  BUCKET: ${{ secrets.SUPPORT_BUCKET }}
+  ACCESS_KEY: ${{ secrets.SUPPORT_DELIVER_ID }}
+  SECRET_KEY: ${{ secrets.SUPPORT_DELIVER_SECRET }}
+  SRC_DIR: 'templates'
+  DEST_DIR: '.'
+  CHECK_DIR: 'templates'
 
 jobs:
   superlinter:
@@ -31,7 +37,7 @@ jobs:
       - name: Run Checkov action
         uses: bridgecrewio/checkov-action@master
         with:
-          directory: solutions
+          directory: ${{ env.CHECK_DIR }}
           quiet: true
 
   cfn-nag:
@@ -44,10 +50,10 @@ jobs:
       - name: CFN-NAG
         uses: stelligent/cfn_nag@master
         with:
-          input_path: solutions
+          input_path: ${{ env.CHECK_DIR }}
 
-  deploy:
-    name: Deploy
+  deliver:
+    name: Deliver
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -55,8 +61,9 @@ jobs:
       with:
         args: --delete
       env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-east-1'
-        SOURCE_DIR: 'templates'
+        AWS_S3_BUCKET: ${{ env.BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ env.ACCESS_KEY }}
+        AWS_SECRET_ACCESS_KEY: ${{ env.SECRET_KEY }}
+        AWS_REGION: ${{ env.REGION }}
+        SOURCE_DIR: ${{ env.SRC_DIR }}
+        DEST_DIR: ${{ env.DEST_DIR }}

@@ -38,10 +38,10 @@ Follow the links provided here to get details regarding the installation of the 
 
 If you are comfortable with this procedure, jump to the Agent Installation section for your specific operating system from the menu on the left.
 
-### Ubuntu Server
+Listed below Pointers and tips for SSM installation on specific Operating Systems
 
-Pointers and tips for SSM installation on Ubuntu Server
-
+{% tabs %}
+{% tab title="Ubuntu Server" %}
 #### Checking OS Version 
 
 To get the current version, enter the following command:
@@ -103,4 +103,8 @@ $ lscpu
 ```
 
 Your architecture is listed as the Architecture: `x86_64`
+{% endtab %}
+{% endtabs %}
+
+#### 
 

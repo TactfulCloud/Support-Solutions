@@ -48,20 +48,19 @@ Listed below Pointers and tips for SSM installation on specific Operating System
 
 To get the current version, enter the following command:
 
-```
-$ lsb_release -a
+```bash
+lsb_release -a
 ```
 
 The output should look something like this:
 
-```
-$ $ lsb_release -a
-2 No LSB modules are available.
-3 Distributor ID: Ubuntu
-4 Description: Ubuntu 16.04.2 LTS
-5 Release: 16.04
-6 Codename: xenial
-7 $
+```bash
+lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description: Ubuntu 16.04.2 LTS
+Release: 16.04
+Codename: xenial
 ```
 
 Your OS version is listed as the Description: Ubuntu 16.04.2
@@ -70,38 +69,38 @@ Your OS version is listed as the Description: Ubuntu 16.04.2
 
 To get the current architecture, enter the following command:
 
-```
-$ lscpu
+```bash
+lscpu
 ```
 
 The output should look something like this:
 
-```
-$ lscpu
-2 Architecture: x86_64
-3 CPU op-mode(s): 32-bit, 64-bit
-4 Byte Order: Little Endian
-5 CPU(s): 2
-6 On-line CPU(s) list: 0,1
-7 Thread(s) per core: 1
-8 Core(s) per socket: 2
-9 Socket(s): 1
-10 NUMA node(s): 1
-11 Vendor ID: GenuineIntel
-12 CPU family: 6
-13 Model: 63
-14 Model name: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
-15 Stepping: 2
-16 CPU MHz: 2400.048
-17 BogoMIPS: 4800.09
-18 Hypervisor vendor: Xen
-19 Virtualization type: full
-20 L1d cache: 32K
-21 L1i cache: 32K
-22 L2 cache: 256K
-23 L3 cache: 30720K
-24 NUMA node0 CPU(s): 0,1
-25 Flag
+```bash
+lscpu
+Architecture: x86_64
+CPU op-mode(s): 32-bit, 64-bit
+Byte Order: Little Endian
+CPU(s): 2
+On-line CPU(s) list: 0,1
+Thread(s) per core: 1
+Core(s) per socket: 2
+Socket(s): 1
+NUMA node(s): 1
+Vendor ID: GenuineIntel
+CPU family: 6
+Model: 63
+Model name: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+Stepping: 2
+CPU MHz: 2400.048
+BogoMIPS: 4800.09
+Hypervisor vendor: Xen
+Virtualization type: full
+L1d cache: 32K
+L1i cache: 32K
+L2 cache: 256K
+L3 cache: 30720K
+NUMA node0 CPU(s): 0,1
+Flag
 ```
 
 Your architecture is listed as the Architecture: `x86_64`

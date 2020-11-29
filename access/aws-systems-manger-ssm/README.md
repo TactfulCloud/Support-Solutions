@@ -8,7 +8,7 @@ description: Describes the use and implementation of AWS SSM for secure access.
 
 The AWS Systems Manager service provides many different features for providing visibility, control, compliance, and monitoring of your AWS EC2 Compute Instances.
 
-AWS SSM is a key component of how Tactful Cloud securely accesses, modifies, and reports on resources in your environment. In order for Tactful Cloud to safely and securely manage your resources, we highly encourage the use and implementation of the AWS Systems Manager Agent. 
+AWS SSM is a key component of how Tactful Cloud securely accesses, modifies, and reports on resources in your environment. In order for Tactful Cloud to safely and securely manage your resources, we highly encourage the use and implementation of the AWS Systems Manager Agent.
 
 {% hint style="warning" %}
 AWS SSM is not required for Tactful Cloud access; however, its implementation is highly encouraged.
@@ -44,7 +44,7 @@ Listed below Pointers and tips for SSM installation on specific Operating System
 
 {% tabs %}
 {% tab title="Ubuntu Server" %}
-#### Checking OS Version 
+#### Checking OS Version
 
 To get the current version, enter the following command:
 
@@ -110,4 +110,3 @@ Your architecture is listed as the Architecture: `x86_64`
 ### Support
 
 For issues regarding the implementation of AWS SSM please contact us at [support@tactful.cloud](mailto:support@tactful.cloud)
-

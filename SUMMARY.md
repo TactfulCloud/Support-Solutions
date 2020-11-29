@@ -4,8 +4,8 @@
 
 ## How-Tos
 
-* [Find AWS Organization ID](how-tos/find-aws-organization-id.md)
 * [Find AWS Account ID](how-tos/find-aws-account-id.md)
+* [Find AWS Organization ID](how-tos/find-aws-organization-id.md)
 
 ## Solutions
 

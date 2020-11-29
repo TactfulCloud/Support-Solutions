@@ -38,6 +38,8 @@ Follow the links provided here to get details regarding the installation of the 
 
 If you are comfortable with this procedure, jump to the Agent Installation section for your specific operating system from the menu on the left.
 
+### Tips & Pointers
+
 Listed below Pointers and tips for SSM installation on specific Operating Systems
 
 {% tabs %}
@@ -106,5 +108,7 @@ Your architecture is listed as the Architecture: `x86_64`
 {% endtab %}
 {% endtabs %}
 
-#### 
+### Support
+
+For issues regarding the implementation of AWS SSM please contact us at [support@tactful.cloud](mailto:support@tactful.cloud)
 

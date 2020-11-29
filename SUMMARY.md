@@ -22,7 +22,3 @@
   * [Ubuntu Server](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-ubuntu.html)
 * [Support Access Roles](access/support-access-roles.md)
 
----
-
-* [Untitled](untitled.md)
-

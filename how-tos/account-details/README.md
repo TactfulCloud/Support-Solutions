@@ -1,5 +1,5 @@
 ---
-description: Resources for finding AWS account details
+description: Resources for finding AWS account details.
 ---
 
 # Account Details

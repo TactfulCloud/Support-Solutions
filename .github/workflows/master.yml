@@ -18,27 +18,3 @@ jobs:
       - name: Run Superlinter
         id: superlinter
         uses: github/super-linter@v3.13.2
-
-  checkov:
-    runs-on: ubuntu-latest
-    name: Checkov
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@master
-      - name: Run Checkov action
-        uses: bridgecrewio/checkov-action@master
-        with:
-          directory: ${{ env.CHECK_DIR }}
-          quiet: true
-
-  cfn-nag:
-    if: always()
-    runs-on: ubuntu-latest
-    name: Cfn-Nag
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-      - name: CFN-NAG
-        uses: stelligent/cfn_nag@master
-        with:
-          input_path: ${{ env.CHECK_DIR }}

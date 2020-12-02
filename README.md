@@ -1,6 +1,10 @@
-# Support & Resource Documentation
+---
+description: >-
+  These solutions are available for use by the public but are leveraged for the
+  support of the Tactful Cloud Support Team.
+---
 
-These solutions are available for use by the public but are leveraged for the support of the Tactful Cloud Support Team.
+# Support & Resource Documentation
 
 ## Contributing
 

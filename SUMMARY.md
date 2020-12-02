@@ -2,25 +2,19 @@
 
 * [Support & Resource Documentation](README.md)
 
-## How-Tos
+## AWS
 
-* [AWS](how-tos/aws/README.md)
-  * [Find AWS Account ID](how-tos/aws/account-id.md)
-  * [Find AWS Organization ID](how-tos/aws/organization-id.md)
-
-## Access
-
-* [AWS](access/aws/README.md)
-  * [Support Access Roles](access/aws/support-roles.md)
-
-## Solutions
-
-* [AWS](solutions/aws/README.md)
-  * [IAM](solutions/aws/iam/README.md)
-    * [Roles](solutions/aws/iam/roles/README.md)
-      * [EC2 Instance Monitoring & Secure Access](solutions/aws/iam/roles/ec2-monitoring-secure-access.md)
-  * [Systems Manager \(SSM\)](solutions/aws/systems-manager/README.md)
-    * [Installation](solutions/aws/systems-manager/installation/README.md)
+* [How-To](aws/how-to/README.md)
+  * [Find AWS Organization ID](aws/how-to/organization-id.md)
+  * [Find AWS Account ID](aws/how-to/account-id.md)
+* [Solutions](aws/solutions-1/README.md)
+  * [CloudWatch](aws/solutions-1/cloudwatch.md)
+  * [IAM](aws/solutions-1/iam/README.md)
+    * [Roles](aws/solutions-1/iam/roles/README.md)
+      * [Support Access Roles](aws/solutions-1/iam/roles/support-roles.md)
+      * [EC2 Instance Monitoring & Secure Access](aws/solutions-1/iam/roles/ec2-monitoring-secure-access.md)
+  * [Systems Manager \(SSM\)](aws/solutions-1/systems-manager/README.md)
+    * [Installation](aws/solutions-1/systems-manager/installation/README.md)
       * [Amazon Linux](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-al.html)
       * [Amazon Linux 2](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-al2.html)
       * [CentOS](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-centos.html)
@@ -30,8 +24,7 @@
       * [SUSE](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-sles.html)
       * [Ubuntu Server](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-ubuntu.html)
       * [Windows Server](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-win.html)
-    * [SSM VPC Endpoint](solutions/aws/systems-manager/ssm-endpoint.md)
-  * [CloudWatch](solutions/aws/cloudwatch.md)
+    * [SSM VPC Endpoint](aws/solutions-1/systems-manager/ssm-endpoint.md)
 
 ## Links
 

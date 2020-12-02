@@ -54,7 +54,7 @@ To deploy these resources into your AWS account\(s\) you must follow these steps
 
 Or you can download the template from [http://aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml](http://aws-support.tactfulcloud.com/iam/tactfulcloud-support-access.yml) to deploy manually.
 
-![launch-support-stack](../../.gitbook/assets/launch-support-stack.gif)
+![launch-support-stack](../../../../.gitbook/assets/launch-support-stack.gif)
 
 ## Updating Permissions
 
@@ -67,7 +67,7 @@ To change or remove permissions temporarily follow these steps from within the A
 5. Complete prompts until you update the template.
 6. Permissions will be modified accordingly and any previous resources will be removed if permissions have been lowered.
 
-![update-support-stack](../../.gitbook/assets/update-support-stack.gif)
+![update-support-stack](../../../../.gitbook/assets/update-support-stack.gif)
 
 ### Deleting Permissions
 
@@ -78,5 +78,5 @@ To completely remove the resources deployed follow these steps from within the A
 3. Select _Delete_
 4. Follow the default prompts, to complete the removal of the template and all related deployed resources
 
-![delete-support-stack](../../.gitbook/assets/delete-support-stack.gif)
+![delete-support-stack](../../../../.gitbook/assets/delete-support-stack.gif)
 

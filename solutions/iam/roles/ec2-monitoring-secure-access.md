@@ -82,4 +82,3 @@ Recommended: Deploy only the Server Role unless manual log configuration per EC2
 ![launch-cw-ssm-role](../../../.gitbook/assets/cft-cw-ssm-role.gif)
 
 Or you can download the template from [https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml](https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml) to deploy manually.
-

@@ -4,7 +4,7 @@ name: Production Workflow
 on:
   push:
     branches:
-      - master
+      - aws
 
 env:
   REGION: 'us-east-1'

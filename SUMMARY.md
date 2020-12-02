@@ -33,3 +33,12 @@
     * [SSM VPC Endpoint](solutions/aws/systems-manager/ssm-endpoint.md)
   * [CloudWatch](solutions/aws/cloudwatch.md)
 
+## Links
+
+---
+
+* [Tactful Cloud Home](https://tactful.cloud)
+* [Submit a Ticket](http://support.tactful.cloud)
+* [Courses](http://courses.tactful.cloud)
+* [GitHub](https://github.com/TactfulCloud)
+

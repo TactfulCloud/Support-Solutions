@@ -5,8 +5,8 @@
 ## AWS
 
 * [How-To](aws/how-to/README.md)
-  * [Find AWS Organization ID](aws/how-to/organization-id.md)
-  * [Find AWS Account ID](aws/how-to/account-id.md)
+  * [Find AWS Organization ID](aws/how-to/find-organization-id.md)
+  * [Find AWS Account ID](aws/how-to/find-account-id.md)
 * [Solutions](aws/solutions-1/README.md)
   * [CloudWatch](aws/solutions-1/cloudwatch.md)
   * [IAM](aws/solutions-1/iam/README.md)

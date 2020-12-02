@@ -79,3 +79,4 @@ To completely remove the resources deployed follow these steps from within the A
 4. Follow the default prompts, to complete the removal of the template and all related deployed resources
 
 ![delete-support-stack](../.gitbook/assets/delete-support-stack.gif)
+

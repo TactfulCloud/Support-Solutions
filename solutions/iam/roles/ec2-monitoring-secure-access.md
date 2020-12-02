@@ -79,7 +79,7 @@ Recommended: Deploy only the Server Role unless manual log configuration per EC2
 | Admin Role | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=role-ec2-cw-ssm&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml&param_RoleType=Admin) |
 | Both | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=role-ec2-cw-ssm&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml&param_RoleType=Both) |
 
-![launch-cw-ssm-role](../../../../.gitbook/assets/cft-cw-ssm-role.gif)
+![launch-cw-ssm-role](../../../.gitbook/assets/cft-cw-ssm-role.gif)
 
 Or you can download the template from [https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml](https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml) to deploy manually.
 

@@ -11,11 +11,11 @@ description: >-
 
 A certain level of permissions is required to be supplied in the IAM Role attached to the Instance in order to log advanced monitoring to AWS CloudWatch as well as access, management, and inventory with AWS SSM.
 
-The following explains the process to provide permissions to your EC2 Instance\(s\) 
+The following explains the process to provide permissions to your EC2 Instance\(s\)
 
 ### No existing IAM Role
 
-If you do not have an IAM Role created to attach to your instance, you can create one by using the _**Deployment**_ process provided in this document. 
+If you do not have an IAM Role created to attach to your instance, you can create one by using the _**Deployment**_ process provided in this document.
 
 {% hint style="info" %}
 The permissions provided in the Role that is deployed from this document include permissions for enabling EC2 Instances to create CloudWatch Logs and Access via SSM. This does not affect pricing or security. These are base recommended permissions for EC2 Instances.
@@ -45,7 +45,7 @@ The SSM Managed Instance Core policy is what is required for the instance to be 
 
 ### Attaching an IAM Role to EC2
 
-To follow the correct process for attaching/changing an EC2 Instance Role, please visit: 
+To follow the correct process for attaching/changing an EC2 Instance Role, please visit:
 
 {% embed url="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/iam-roles-for-amazon-ec2.html\#attach-iam-role" caption="Modify EC2 Instance Role" %}
 
@@ -80,4 +80,3 @@ Recommended: Deploy only the Server Role unless manual log configuration per EC2
 | Both | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=role-ec2-cw-ssm&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml&param_RoleType=Both) |
 
 Or you can download the template from [https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml](https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml) to deploy manually.
-

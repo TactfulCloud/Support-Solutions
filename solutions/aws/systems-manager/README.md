@@ -2,7 +2,7 @@
 description: Describes the use and implementation of AWS SSM for secure access.
 ---
 
-# AWS Systems Manger \(SSM\)
+# Systems Manager \(SSM\)
 
 ## Systems Manager Purpose
 
@@ -34,7 +34,7 @@ Listed here are links to resources to learn more about the AWS Systems Manager S
 
 In order to properly use the SSM Agent, the EC2 instance requires specific settings to be configured. To complete those requirements please visit the following page:
 
-{% page-ref page="../ec2-instance-monitoring-and-secure-access/" %}
+{% page-ref page="../iam/roles/ec2-monitoring-secure-access.md" %}
 
 Once the prerequisites are complete, follow the links provided here to get details regarding the installation of the SSM Agent on your specific operating systems.
 

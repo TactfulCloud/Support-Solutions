@@ -57,7 +57,7 @@ If you cannot allow outbound access to the public on port 443 via NATing to bein
 
 This is an advanced configuration that is out of scope for this document. Instructions for that process are provided here:
 
-{% page-ref page="ssm-vpc-endpoint.md" %}
+{% page-ref page="../../systems-manager/ssm-endpoint.md" %}
 
 ## Deployment
 
@@ -80,3 +80,4 @@ Recommended: Deploy only the Server Role unless manual log configuration per EC2
 | Both | [![Launch Stack](https://cdn.rawgit.org/global.tactfulcloud.com/icons/AWS/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/create/review?stackName=role-ec2-cw-ssm&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml&param_RoleType=Both) |
 
 Or you can download the template from [https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml](https://s3.amazonaws.com/aws-support.tactfulcloud.com/iam/role-ec2-cw-ssm.yml) to deploy manually.
+

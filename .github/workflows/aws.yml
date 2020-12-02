@@ -1,5 +1,5 @@
 ---
-name: Production Workflow
+name: AWS Variant Workflow
 
 on:
   push:

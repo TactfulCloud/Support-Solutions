@@ -35,7 +35,7 @@ Parameters:
   RoleName:
     Type: String
     Description: Name the role (resulting roles will be - {this input}-admin and/or {this input-server})
-    Default: ec2-cw-ssm
+    Default: -ec2-cw-ssm
 
 Conditions:
 
@@ -48,7 +48,7 @@ Resources:
     Condition: deployServer
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub -${RoleName}-server
+      RoleName: !Sub ${RoleName}-server
       Description: Basic permissions to allow CloudWatch Logging and SSM Access
       AssumeRolePolicyDocument:
         Statement:
@@ -75,7 +75,7 @@ Resources:
     Condition: deployAdmin
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub -${RoleName}-admin
+      RoleName: !Sub ${RoleName}-admin
       Description: Basic permissions to allow CloudWatch to create Logging Config and Store in SSM Parameter
       AssumeRolePolicyDocument:
         Statement:

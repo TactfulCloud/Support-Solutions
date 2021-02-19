@@ -13,8 +13,8 @@ Create the following resources in your account
 | Resource | Purpose | Deploy Link |
 | :--- | :--- | :--- |
 | S3 Bucket | Holds resource templates | [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/quickcreate?stackName=bucket-github-cicd&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/cicd/bucket-github-templates.yml) |
-| IAM User | Permissions to put objects in S3 | [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/quickcreate?stackName=bucket-github-cicd&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/cicd/user-github-deliver.yml) |
-| IAM User | Permission to deploy resources | [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/quickcreate?stackName=bucket-github-cicd&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/cicd/user-github-deploy.yml) |
+| IAM User | Permissions to put objects in S3 | [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/quickcreate?stackName=user-github-delivery&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/cicd/user-github-deliver.yml) |
+| IAM User | Permission to deploy resources | [![Launch Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/quickcreate?stackName=user-github-deploy&templateURL=https://s3.amazonaws.com/aws-support.tactfulcloud.com/cicd/user-github-deploy.yml) |
 
 > _**Demo Note:**_ The `Deploy` IAM user template provided in this project is configured with `PowerUserAccess` and can do virtually anything in your environment.
 

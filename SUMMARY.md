@@ -30,3 +30,7 @@
     * [Ubuntu Server](https://docs.aws.amazon.com/systems-manager/latest/userguide/agent-install-ubuntu.html)
     * [Windows Server](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-install-ssm-win.html)
 
+## CICD
+
+* [Github Actions](cicd/github-cicd-automation.md)
+

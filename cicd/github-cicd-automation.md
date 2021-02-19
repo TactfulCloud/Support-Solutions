@@ -1,8 +1,10 @@
+---
+description: AWS Automation (CICD) with GitHub Actions
+---
+
 # Github Actions
 
-## AWS Automation \(CICD\) with GitHub Actions
-
-This is a demo project providing an example of some workflow checks and templates for the CICD of CloudFormation and Terraform templates to an AWS Account
+This is a demo providing an example of some workflow checks and templates for the CICD of CloudFormation and Terraform templates to an AWS Account.
 
 ### Requirements
 
@@ -16,8 +18,6 @@ Create the following resources in your account
 
 > _**Demo Note:**_ The `Deploy` IAM user template provided in this project is configured with `PowerUserAccess` and can do virtually anything in your environment.
 
-#### Production Notice
-
 > _**Production Note:**_ In a production environment it would be best to use a [GitHub Action Runner](https://github.com/actions/runner) to prevent storing credentials in your projects.
 
 #### S3 Bucket
@@ -29,13 +29,13 @@ This [template](requirements/bucket-github-templates.yml) is used to deploy an S
 The following parameters are used:
 
 * Bucket Name
-* Public Access - will determine the next two parameters are required. If `true` then Account ID and Org ID are not required as bucket will be open to public for access to template URLS in the CloudFormation Console.
+* Public Access - will determine the next two parameters are required. If `true` then Account ID and Org ID are not required as bucket will be open to public for access to template URLs in the CloudFormation Console.
 * Organization ID - Required for allowing access to bucket from CloudFormation Console to all accounts in an AWS Organization.
-* Account Id - Required to allow access to a specific AWS Account.
+* Account Id - Required to allow access to a specific AWS account.
 
 ![](../.gitbook/assets/bucket-stack-params.png)
 
-#### IAM Deliver User
+#### IAM Delivery User
 
 This [template](requirements/user-github-deliver.yml) deploys an IAM user that has access to `s3:PutObject` to place templates for access.
 
@@ -69,7 +69,7 @@ The following Workflows are provided in this project.
 
 **Review**
 
-This workflow is configured to run on all pushes except to the Master/Main branch and will do code quality / linting checks on your whatever directory configured in the `env:` variable for each job.
+This workflow is configured to run on all pushes except to the Master/Main branch and will do code quality/linting checks on whatever directory configured in the `env:` variable for each job.
 
 **Deliver**
 
@@ -77,11 +77,11 @@ This workflow is configured to run only on a push to the Master/Main branch and 
 
 #### CloudFormation
 
-The CloudFormation workflows provided here aid in SCA and deployment of resources.
+The CloudFormation workflows provided here aid in SCA and the deployment of resources.
 
 **CFN-Review**
 
-This workflow runs on push to any branch except Master/Main and review CloudFormation YAML templates. This argument can be updated to include JSON if required or omitted to review all files in directory.
+This workflow runs on the push to any branch except Master/Main and reviews CloudFormation YAML templates. This argument can be updated to include JSON if required or omitted to review all files in the directory.
 
 **CFN-DEPLOY**
 
@@ -89,7 +89,7 @@ This workflow can be configured to deploy single or multiple CloudFormation Temp
 
 User permissions for the resources deployed must be properly configured.
 
-This demo user should have access to do virtually any deployment accept for IAM resources.
+This demo user should have access to do virtually any deployment except for IAM resources.
 
 For each template to be deployed, a new step in the job will be required:
 
@@ -112,13 +112,13 @@ More information on these workflows can be found [here](https://github.com/marke
 
 **TF-REVIEW**
 
-Initialized Terraform in your runner environment, checks formatting of your template, and validates it.
+Initialized Terraform in your runner environment, checks the formatting of your template and validates it.
 
-Workflow runs on push to any branch but Main/Master.
+The Workflow runs on the push to any branch but Main/Master.
 
 **TF-PLAN**
 
-Workflow runs at the creation of a pull request creating a Terraform `Plan` and outputting that plan to a comment in the pull request to be reviewed.
+The Workflow runs at the creation of a pull request creating a Terraform `Plan` and outputting that plan to a comment in the pull request to be reviewed.
 
 > Note: Depending on where your place your state file, this workflow or your TF Template may require a few more modifications.
 

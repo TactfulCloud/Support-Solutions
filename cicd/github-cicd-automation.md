@@ -20,7 +20,7 @@ Create the following resources in your account
 
 ### S3 Bucket
 
-This [template](requirements/bucket-github-templates.yml) is used to deploy an S3 bucket that has stores templates for AWS ORG, Account or Public Access.
+This [template](templates/cicd/bucket-github-templates.yml) is used to deploy an S3 bucket that has stores templates for AWS ORG, Account or Public Access.
 
 #### Parameters
 
@@ -35,7 +35,7 @@ The following parameters are used:
 
 ### IAM Deliver User
 
-This [template](requirements/user-github-deliver.yml) deploys an IAM user that has access to `s3:PutObject` to place templates for access.
+This [template](templates/cicd/user-github-deliver.yml) deploys an IAM user that has access to `s3:PutObject` to place templates for access.
 
 This user only has permissions to List, Get, and Put objects in the desired S3 Bucket.
 
@@ -43,7 +43,7 @@ The `Access Key` and `Secret` are delivered to AWS Secrets Manager in the region
 
 ### IAM Deploy User
 
-This [template](requirements/user-github-deploy.yml) deploys an IAM user that has access `PowerUserAccess`.
+This [template](templates/cicd/user-github-deploy.yml) deploys an IAM user that has access `PowerUserAccess`.
 
 This user can do virtually anything in your AWS Account so store credentials wisely and it is recommended to use a GitHub Runner.
 

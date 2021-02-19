@@ -55,7 +55,7 @@ jobs:
 
   deliver:
     name: Deliver
-    needs: [superlinter, checkov, cfn-nag]
+    needs: [checkov, cfn-nag]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master

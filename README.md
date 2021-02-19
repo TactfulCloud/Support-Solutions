@@ -1,8 +1,10 @@
+---
+description: >-
+  These solutions are available for use by the public but are leveraged for the
+  support of the Tactful Cloud Support Team.
+---
+
 # Support & Resource Documentation
-
-Solutions provided here are for the support and management of multiple AWS environments.
-
-These solutions are available for use by the public but are leveraged for the support of the Tactful Cloud Support Team.
 
 ## Contributing
 

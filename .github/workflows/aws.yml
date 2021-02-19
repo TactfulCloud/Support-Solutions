@@ -17,6 +17,7 @@ env:
 
 jobs:
   superlinter:
+    if: false
     runs-on: ubuntu-latest
     env:
       RUN_LOCAL: true
